@@ -1,0 +1,225 @@
+/* Importa fontes do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define styles em todo o site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove marcadores de lista */
+ul{
+    list-style: none;
+}
+
+/* Remove o sublinhado de links e define cor padrão */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styles para a barra de navegação */
+#top_nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #171717;
+    color: white;
+    padding: 1rem 3rem;
+}
+
+/* Styles para os ícones da barra de navegação */
+#top_nav > ul, 
+#top_nav > div, 
+#top_nav > div > ul{
+    display: flex;
+    gap: 1.25rem;
+    font-size: 19px;
+}
+
+/* Styles para a seção principal */
+#main_top {
+    display: flex;
+    background-image: url(background.png);
+    background-size: cover;
+    justify-content:center;
+}
+
+/* Adiciona margem superior e inferior */
+#main_top_content{
+    margin: 30vh 0;
+}
+
+/* Define a cor do background e cor do texto em todo o body */
+body {
+    background-color: #333;
+    color: white;
+}
+
+/* Styles para a frase de bem vindo */
+#bv{
+    font-size: 39px;
+    font-family: Bebas Neue;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: 7px;
+    color: rgb(156, 193, 223);
+    margin: 25px;
+}
+
+/* Styles para o nome */
+#name{
+    font-size: 69px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Styles para a profissão */
+#role{
+    font-size: 25px;
+    margin: 30px;
+    text-align:right;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+/* Styles para as linhas do texto Sobre Mim */
+body > div#sobremim{
+    line-height: 1.8rem;
+}
+
+/* Styles para a div Sobre Mim */
+#sobremim {
+    width: 500px;
+    margin: 50px auto;
+    padding: 0;
+}
+
+/* Styles para título Sobre Mim */
+#sobre{
+    text-align: center;
+    font-family: Bebas Neue;
+    letter-spacing: 5px;
+    font-weight: 1;
+    color: rgb(156, 193, 223);
+}
+
+/* Styles para o texto Sobre Mim */
+#texto{
+    text-align: justify;
+    margin: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Styles para imagem perfil */
+#pfp{
+    border-radius: 69%;
+    height: 69px;
+    float: right;
+}
+
+/* FLEXBOX */
+#flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+#flex > div{
+    flex: 1 1 20vw;
+    margin: 1vh 1vw;
+    background-color: #171717;
+    padding: 2%;
+}
+
+/* Styles para os títulos de cada div */
+#flex > div > h2{
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.17em;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color:#999;
+}
+
+/* Styles para os textos de cada div */
+#flex > div > ul,
+#flex > div > p{
+    font-family: "lora-regular", serif;
+    font-size: 1rem;
+    line-height: 1.9rem;
+    color: #6e6e6e;
+    margin-top: 3%;
+}
+
+/* Styles para alinhas os ícones da div Contato */
+#contact > #reta{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+/* Styles para aumentar texto e ícone da div Contato */
+#contact > ul > li{
+    font-size: 19px;
+}
+
+/* Pontos de interrupção*/
+@media (max-width: 575px) {
+    /* Styles para texto e ícones da navegação */
+    #top_nav > ul, 
+    #top_nav > div, 
+    #top_nav > div > ul{
+    gap: .61rem;
+    font-size: 85%;
+    }
+    /* Styles para div Sobre Mim */
+    #sobremim {
+        width: 90%;
+        margin: 50px auto;
+        padding: 0;
+    }
+    /* Styles para texto e ícones div Contato */
+    #contact > ul > li{
+        font-size: 1rem;
+    }
+
+   }
+
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Styles para texto e ícones da navegação */
+    #top_nav > ul, 
+    #top_nav > div, 
+    #top_nav > div > ul{
+    gap: 1rem;
+    font-size: 100%;
+    }
+    /* Styles para texto divs flexbox */
+    #flex > div > ul,
+    #flex > div > p{
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-top: 2%;
+    }
+    /* Styles para títulos divs flexbox */
+    #flex > div > h2{
+        font-size: 1em;
+        letter-spacing: .25rem;
+    }
+}
+
+@media (min-width: 768px){
+    /* Styles para texto divs flexbox */
+    #flex > div > ul,
+    #flex > div > p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+    margin-top: 3%;
+    }
+    /* Styles para títulos divs flexbox */
+    #flex > div > h2{
+        font-size: 1.17em;
+        letter-spacing: .25rem;
+    }
+}
+   
