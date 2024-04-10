@@ -28,8 +28,9 @@ nav{
     left: 0;
     width: 100%;
     z-index: 1000;
-       
+   
 }
+
 /* Styles para a barra de navegação */
 #top_nav{
     display: flex;
@@ -232,3 +233,4 @@ body > div#sobremim{
         letter-spacing: .25rem;
     }
 }
+   
